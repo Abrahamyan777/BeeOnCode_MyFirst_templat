@@ -1,0 +1,7 @@
+.main{
+    height: 80vh;
+    background-color: #d8f0fd ;  
+    display: flex;
+    flex-direction: column;
+    height: 1200px;
+}

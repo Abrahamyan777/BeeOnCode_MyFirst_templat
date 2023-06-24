@@ -1,0 +1,55 @@
+.hidenLogin{
+    width: 350px;
+    height: 400px;
+    background-color: rgb(116, 116, 107);
+    position: absolute;
+    top: 11vh;
+    right: -350px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    transition: all ease-in-out 450ms;
+}
+.shownForm{
+    width: 350px;
+    height: 400px;
+    background-color: rgb(116, 116, 107);
+    position: absolute;
+    top: 11vh;
+    right: 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    transition: all ease-in-out 450ms;
+}
+.imgesO{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 6px;
+    left: -50px;
+    transform: rotate(0deg);
+    transition: all ease-in-out 1000ms;
+}
+.imgesC{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 6px;
+    left: -50px;
+    transform: rotate(180deg);
+    transition: all ease-in-out 1000ms;
+}
+.reg{
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: -10px;
+}
+.input1{
+    width: 250px;   
+}
+

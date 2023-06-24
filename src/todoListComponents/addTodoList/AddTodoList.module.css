@@ -1,0 +1,20 @@
+.addTodoListContener{
+    padding: 20px 0;
+
+}
+.addTodoFlex{
+    display: flex;
+    justify-content: space-between;
+}
+input{
+    width: 80%;
+    padding: 20px 0;
+    font-size: 20px;
+    padding: 0 20px;
+}
+button{
+    margin-left: 5px;
+    padding: 10px 35px;
+    margin-right: 10px;
+    background-color: darkcyan;
+}

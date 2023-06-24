@@ -1,0 +1,7 @@
+.registrationContener{
+    width: 35%;
+    border-color: chartreuse;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
