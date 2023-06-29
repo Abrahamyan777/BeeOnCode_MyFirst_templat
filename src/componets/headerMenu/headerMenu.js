@@ -11,8 +11,8 @@ function HeaderMenu (){
                 </NavLink>
             </li>
             <li>
-                <NavLink to="BLOG">
-                    BLOG
+                <NavLink to="scrollbar">
+                    ScrollBar
                 </NavLink>
             </li>
             <li>
