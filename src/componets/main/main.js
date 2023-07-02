@@ -7,12 +7,14 @@ import TodoList from '../../pag/TodoList/TodoList';
 import Service from '../../pag/service/Service';
 import Posts from '../../pag/Post/Post';
 import Scrollbar from '../../pag/Scrollbar/Scrollbar';
+import Hidenlogin from '../hidenLogin/hidenLogin';
 
 
 function Main ({text, setText}) {
     
     return (
         <div className={css.main}>
+            <Hidenlogin />
         <Routes>
                 <Route path="/" element={<Home />}/>
                 <Route path="/scrollbar" element={<Scrollbar />}/>

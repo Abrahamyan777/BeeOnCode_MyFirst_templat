@@ -28,7 +28,7 @@ function AddTodoList ({text, setText}) {
         <div className={css.addTodoListContener}>
             <div className={css.addTodoFlex}>
                 <input placeholder='' value={saveInput} onChange={ (e) => setSaveInput(e.target.value)}/>
-                <button onClick={saveNewTodoList}>Add</button>
+                <button onClick={saveNewTodoList} className={css.todoBtn}>Add</button>
             </div>
         </div>
     )

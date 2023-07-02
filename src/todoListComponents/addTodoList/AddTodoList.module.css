@@ -12,7 +12,7 @@ input{
     font-size: 20px;
     padding: 0 20px;
 }
-button{
+.todoBtn{
     margin-left: 5px;
     padding: 10px 35px;
     margin-right: 10px;

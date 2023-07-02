@@ -1,0 +1,127 @@
+$heigh_120vh: 120vh;
+$bgColorGreen: green;
+$bgColorBtnHover: rgb(68, 50, 180);
+
+@mixin transform_Opasity($delay) {
+    transform: translateY(0);
+    transition-delay: $delay;
+    opacity: 1;
+}
+@mixin marg($marg...){
+    margin: $marg;
+}
+
+.btnDiv {
+    @include marg(0 0 20px 0);
+    display: flex;
+    justify-content: center;
+    button{
+        padding: 10px 35px;
+        margin-right: 10px;
+    }
+    .clickTitle1{
+        background-color: rgb(215, 36, 147);
+        &:hover{
+            background-color: $bgColorBtnHover;
+        }
+    }
+    .clickTitle2{
+        background-color: rgb(205, 141, 38);
+        &:hover{
+            background-color: $bgColorBtnHover;
+        }
+    }
+    .clickTitle3{
+        background-color: rgb(205, 38, 194);
+        &:hover{
+            background-color: $bgColorBtnHover;
+        }
+    }
+}
+
+.block1 {
+    height: $heigh_120vh;
+    background-color: $bgColorGreen;
+}
+
+.title1,
+.title2 {
+    text-align: center;
+}
+
+.block2 {
+    height: $heigh_120vh;
+    background-color: rgb(144, 95, 173);
+
+    .innerBlock2 {
+        height: $heigh_120vh;
+        display: flex;
+        justify-content: space-around;
+
+        .star1,
+        .star2,
+        .star3 {
+            width: 20%;
+            height: 50%;
+            background-color: black;
+            transform: translateY(150px);
+            opacity: 0.5;
+        }
+
+    }
+    .animation{
+        div{
+            transition: 1s;
+        }
+    }
+    .animation > div:first-child {
+        @include transform_Opasity(0s);
+    }
+    
+    .animation > div:nth-child(2) {
+        @include transform_Opasity(0.3s);
+    }
+    
+    .animation > div:nth-child(3) {
+        @include transform_Opasity(0.6s);
+    }
+}
+
+.block3 {
+    height: $heigh_120vh;
+    background-color: $bgColorGreen;
+}
+.firstSection{
+    display: flex;
+    justify-content: center;
+}
+
+@mixin grid($cols, $margin) {
+    float: left;
+    background-color: $bgColorBtnHover;
+    margin-right: $margin;
+    margin-bottom: $margin;
+    height: 100px;
+    width: ((100% - (($cols - 1) * $margin)) / $cols) ;
+    @if($cols >= 5){
+        width: 100%;
+        margin-right: 0;
+    }
+    &:nth-child(#{$cols}n){
+        margin-right: 0;
+    }
+}
+
+.grid{
+    width: 100%;
+    float: left;
+    background-color: chartreuse;
+    > div{
+        @include grid(3, 5% )
+    }
+}
+
+
+
+
+

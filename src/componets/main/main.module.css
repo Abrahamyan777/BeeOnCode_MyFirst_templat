@@ -1,5 +1,4 @@
 .main{
     background-color: #d8f0fd ;  
-    display: flex;
-    flex-direction: column;
+    position: relative;
 }

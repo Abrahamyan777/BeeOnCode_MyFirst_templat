@@ -32,7 +32,6 @@ function App() {
     <div className="App">
       <Header />
       <Main  text={text} setText={setText}/>
-      <Hidenlogin />
       <Footer />
     </div>
   );
