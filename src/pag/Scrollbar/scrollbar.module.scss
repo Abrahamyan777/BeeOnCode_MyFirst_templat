@@ -117,7 +117,7 @@ $bgColorBtnHover: rgb(68, 50, 180);
     float: left;
     background-color: chartreuse;
     > div{
-        @include grid(3, 5% )
+        @include grid(4, 5% )
     }
 }
 
