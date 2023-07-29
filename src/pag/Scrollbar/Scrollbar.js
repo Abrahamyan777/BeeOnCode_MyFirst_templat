@@ -91,7 +91,15 @@ const Scrollbar = () => {
             <h1 className={css.title1} ref={myRef}  > Example1 Scrollbar {myElementIsVisible ? 'Yes' : 'No'}</h1>
 
             </div>
-            <div className={css.block1}></div>
+
+            <div className={css.grid_body}>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+
             <div className={css.firstSection}>
                 <h3 ref={firstRef} >This is a title</h3>
                 <button onClick={() => hendleClick4()}>Click me</button>

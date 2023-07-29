@@ -7,7 +7,8 @@ $bgColorBtnHover: rgb(68, 50, 180);
     transition-delay: $delay;
     opacity: 1;
 }
-@mixin marg($marg...){
+
+@mixin marg($marg...) {
     margin: $marg;
 }
 
@@ -15,25 +16,32 @@ $bgColorBtnHover: rgb(68, 50, 180);
     @include marg(0 0 20px 0);
     display: flex;
     justify-content: center;
-    button{
+
+    button {
         padding: 10px 35px;
         margin-right: 10px;
     }
-    .clickTitle1{
+
+    .clickTitle1 {
         background-color: rgb(215, 36, 147);
-        &:hover{
+
+        &:hover {
             background-color: $bgColorBtnHover;
         }
     }
-    .clickTitle2{
+
+    .clickTitle2 {
         background-color: rgb(205, 141, 38);
-        &:hover{
+
+        &:hover {
             background-color: $bgColorBtnHover;
         }
     }
-    .clickTitle3{
+
+    .clickTitle3 {
         background-color: rgb(205, 38, 194);
-        &:hover{
+
+        &:hover {
             background-color: $bgColorBtnHover;
         }
     }
@@ -69,20 +77,22 @@ $bgColorBtnHover: rgb(68, 50, 180);
         }
 
     }
-    .animation{
-        div{
+
+    .animation {
+        div {
             transition: 1s;
         }
     }
-    .animation > div:first-child {
+
+    .animation>div:first-child {
         @include transform_Opasity(0s);
     }
-    
-    .animation > div:nth-child(2) {
+
+    .animation>div:nth-child(2) {
         @include transform_Opasity(0.3s);
     }
-    
-    .animation > div:nth-child(3) {
+
+    .animation>div:nth-child(3) {
         @include transform_Opasity(0.6s);
     }
 }
@@ -91,7 +101,8 @@ $bgColorBtnHover: rgb(68, 50, 180);
     height: $heigh_120vh;
     background-color: $bgColorGreen;
 }
-.firstSection{
+
+.firstSection {
     display: flex;
     justify-content: center;
 }
@@ -102,26 +113,55 @@ $bgColorBtnHover: rgb(68, 50, 180);
     margin-right: $margin;
     margin-bottom: $margin;
     height: 100px;
-    width: ((100% - (($cols - 1) * $margin)) / $cols) ;
-    @if($cols >= 5){
+    width: ((100% - (($cols - 1) * $margin)) / $cols);
+
+    @if($cols >=5) {
         width: 100%;
         margin-right: 0;
     }
-    &:nth-child(#{$cols}n){
+
+    &:nth-child(#{$cols}n) {
         margin-right: 0;
     }
 }
 
-.grid{
+.grid {
     width: 100%;
     float: left;
     background-color: chartreuse;
-    > div{
-        @include grid(4, 5% )
+
+    >div {
+        @include grid(4, 5%)
     }
 }
 
+.grid_body {
+    background-color: cornflowerblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 20px 40px;
+    transition: all 2s ease-in-out;
 
+    >div {
+        height: 210px;
+        background-color: blue;
+        margin: 20px;
+    }
+}
 
-
-
+@media screen and (max-width: 996px) {
+    .grid_body {
+        padding: 20px 80px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 650px) {
+    .grid_body {
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 450px) {
+    .grid_body {
+        padding: 20px 30px;
+    }
+}

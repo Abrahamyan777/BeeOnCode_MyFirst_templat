@@ -1,0 +1,32 @@
+.contactFomrContainer{
+    height: 100vh;
+    background-color: rgb(197, 209, 231);
+    border: 1px solid;
+}
+.title{
+    text-align: center;
+    border-bottom: 2px solid black;
+    margin-bottom: 30px !important;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.eror{
+    height: 20px;
+    border: 1px solid;
+    text-align: start;
+    padding-left: 38px;
+    margin-bottom: 20px !important;
+
+}
+.p{
+    color: red;
+    display: inline;
+}
+form{
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid;
+    padding-top: 30px;
+    text-align: center;
+}

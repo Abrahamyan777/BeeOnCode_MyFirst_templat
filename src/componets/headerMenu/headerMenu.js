@@ -21,8 +21,8 @@ function HeaderMenu (){
                 </NavLink>
             </li>
             <li>
-                <NavLink to="Service">
-                    Service
+                <NavLink to="ContactForm">
+                    Form
                 </NavLink>
             </li> 
             <li>
