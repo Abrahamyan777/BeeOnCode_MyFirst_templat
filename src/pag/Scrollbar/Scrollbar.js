@@ -1,35 +1,35 @@
 import React, { useEffect, useRef, useState } from 'react';
 import css from './scrollbar.module.scss'
 import { useInView } from 'react-intersection-observer';
+import Button from '../../common/button/Button';
 
 const Scrollbar = () => {
     const title1Ref = useRef()
     const title2Ref = useRef()
     const title3Ref = useRef()
 
-    const hendelClick1 = () => {
+    const hendleClick1 = () => {
         title1Ref.current?.scrollIntoView({ behavior: 'smooth' });
     }
-    const hendelClick2 = () => {
+    const hendleClick2 = () => {
         title2Ref.current?.scrollIntoView({ behavior: 'smooth' });
     }
 
-
     const { ref: myRef, inView: myElementIsVisible } = useInView();
-
-
     const firstRef = useRef(null);
 
     const hendleClick3 = () => {
         firstRef.current.scrollIntoView({ behavior: 'smooth' })
     }
 
+    const secondRef = useRef(null);
+    const hendleClick4 = () => {
+        secondRef.current.scrollIntoView({ behavior: 'smooth' })
+    }
 
     const { ref: myRocket, inView: myRocketElementIsVisible } = useInView({ threshold: 0.5, rootMargin: '100px' });
-    console.log(myRocketElementIsVisible);
-
+    // console.log(myRocketElementIsVisible);
     const mynewRef = useRef()
-
 
     useEffect(() => {
         if (myRocketElementIsVisible) {
@@ -38,23 +38,41 @@ const Scrollbar = () => {
 
     }, [myRocketElementIsVisible])
 
-    const secondRef = useRef(null);
-
-
-
-    const hendleClick4 = () => {
-        secondRef.current.scrollIntoView({ behavior: 'smooth' })
-    }
-
-
     return (
         <>
             <div ref={secondRef}></div>
             <div className={css.btnDiv} >
-                <button onClick={() => hendelClick1()} className={css.clickTitle1}>Click to title1</button>
-                <button onClick={() => hendelClick2()} className={css.clickTitle2}>Click to title2</button>
-                <button onClick={() => hendleClick3()} className={css.clickTitle3}>Click to title3</button>
+                <Button onClick={() => hendleClick1()} className={css.clickTitle1} width="250px">Click to title1</Button>
+                <Button onClick={() => hendleClick2()} className={css.clickTitle2}>Click to title2</Button>
+                <Button onClick={() => hendleClick3()} className={css.clickTitle3}>Click to title3</Button>
+
             </div>
+
+
+            <div>
+                <h1>Reusble Button </h1>
+                <Button variant='primary' >Click Me</Button>
+                <Button variant='primary' disabled >disabled</Button>
+                <Button variant="outlin" >Login</Button>
+                <Button variant="outlin" disabled >LoginX</Button>
+
+                <Button variant="outlin"  >Login</Button>
+                <Button disabled>Click Me</Button>
+
+                <button type="button" className={css.ho} disabled >Click Me!</button>
+            </div>
+
+
+            <div>
+                <h1>Reusble Links </h1>
+                <Button to="login" variant="ghost">Login</Button>
+                <Button to="login" variant="registr">Login</Button>
+
+                <Button to="registr" variant="registr">Registration</Button>
+                <Button to="registr" variant="ghost">Registration</Button>
+
+            </div>
+
             <div className={css.block1}></div>
             <h1 className={css.title1} ref={title1Ref}> Hello World1</h1>
 
@@ -70,25 +88,23 @@ const Scrollbar = () => {
             </div>
 
             <h1 className={css.title1} ref={title3Ref} > Hello World333</h1>
-            
 
             <div>
-                
                 <h1 className={css.title1} ref={myRef}  > Example1 Scrollbar {myElementIsVisible ? 'Yes' : 'No'}</h1>
-                
-            <div className={css.grid}>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <h1 className={css.title1} ref={myRef}  > Example1 Scrollbar {myElementIsVisible ? 'Yes' : 'No'}</h1>
+
+                <div className={css.gridContainer}>
+                    <div className={css.grid}>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                </div>
+
+                <h1 className={css.title1} ref={myRef}  > Example1 Scrollbar {myElementIsVisible ? 'Yes' : 'No'}</h1>
 
             </div>
 

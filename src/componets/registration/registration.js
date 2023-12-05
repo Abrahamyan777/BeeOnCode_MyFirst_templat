@@ -1,6 +1,7 @@
 import css from './registration.module.css'
 import Input from '../input/input';
-import Button from '../button/button';
+import Button from '../../common/button/Button';
+// import Button from '../button/button';
 
 function Registration (){
     return (
@@ -12,7 +13,7 @@ function Registration (){
                 <Input/>
             </div>
             <div>
-                <Button  text = "Sign in" />
+                <Button>Sign in</Button>
             </div>
         </div>
     )

@@ -1,8 +1,9 @@
 import css from './hidenLogin.module.css'
 import Input from '../input/input';
-import Button from '../button/button';
+// import Button from '../button/button';
 import svg from '../../imges/img.svg'
 import React, {useState} from 'react';
+import Button from '../../common/button/Button';
 
 
 function Hidenlogin (){
@@ -22,7 +23,7 @@ function Hidenlogin (){
             <Input type = "text" placeholder="Фамилия"/>
             <Input type = "text" placeholder="Номер мобильного телефона"/>
             <Input type = "text" placeholder=" эл. адрес"/>
-            <Button text='Регистрация'/> 
+            <Button width="200px" height='50px'>Регистрация</Button>
         </form>
     )
 }

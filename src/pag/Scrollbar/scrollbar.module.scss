@@ -1,5 +1,5 @@
 $heigh_120vh: 120vh;
-$bgColorGreen: green;
+$bgColorGreen: rgb(187, 187, 187);
 $bgColorBtnHover: rgb(68, 50, 180);
 
 @mixin transform_Opasity($delay) {
@@ -10,6 +10,13 @@ $bgColorBtnHover: rgb(68, 50, 180);
 
 @mixin marg($marg...) {
     margin: $marg;
+}
+.ho:hover{
+    background-color: red;
+    
+}
+.ho:disabled{
+    pointer-events: none;
 }
 
 .btnDiv {
@@ -23,7 +30,8 @@ $bgColorBtnHover: rgb(68, 50, 180);
     }
 
     .clickTitle1 {
-        background-color: rgb(215, 36, 147);
+        background-color: rgb(82, 192, 49);
+        border-radius: 15px;
 
         &:hover {
             background-color: $bgColorBtnHover;
@@ -112,7 +120,7 @@ $bgColorBtnHover: rgb(68, 50, 180);
     background-color: $bgColorBtnHover;
     margin-right: $margin;
     margin-bottom: $margin;
-    height: 100px;
+    height: 400px;
     width: ((100% - (($cols - 1) * $margin)) / $cols);
 
     @if($cols >=5) {
@@ -124,14 +132,20 @@ $bgColorBtnHover: rgb(68, 50, 180);
         margin-right: 0;
     }
 }
+// .gridContainer{
+//     max-width: 1024px;
+//     margin: 0 auto;
+
+// }
 
 .grid {
     width: 100%;
+    
     float: left;
     background-color: chartreuse;
 
     >div {
-        @include grid(4, 5%)
+        @include grid(3, 2%)
     }
 }
 

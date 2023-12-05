@@ -1,6 +1,46 @@
 .contactsContainer{
-    height: 500px;
-    width: 500px;
+    width: 80%;
+    margin: 0 auto;
+    height: 1500px;
     border: 1px solid black;
     background-color: rgb(228, 228, 228);
+    box-sizing: border-box;
+  .firstSlick{
+   
+    .slick-slider{
+        .slick-list{
+            .slick-track{
+                .slick-slide{
+                    padding: 0 20px;
+                    box-sizing: border-box;
+                    
+                }
+            }
+        }
+        button{
+            // display: none !important;
+        }
+    }
+  }
+    .secondSlick{
+        margin-top: 150px;
+        height: 500px;
+        border: 1px solid green;
+    }
+}
+.card{
+    width: 20%;
+
+    
+    border: 1px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+    
+    .card-top{
+        border: 1px solid black;
+        
+        img{
+            width: 100%;
+        }
+    }
 }

@@ -12,7 +12,7 @@ const ContactForm = () => {
 
     return (
         <div className='contactFomrContainer'>
-            <h1 className='title'> React Hook</h1>
+            <h1 className='title'> React forms</h1>
             <form onSubmit={handleSubmit(sendInfo)}>
                 <label>
                     first Name:

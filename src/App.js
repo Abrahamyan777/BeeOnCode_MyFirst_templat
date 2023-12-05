@@ -5,6 +5,7 @@ import Main from './componets/main/main.js'
 import Footer from './componets/footer/footer.js'
 import Hidenlogin from './componets/hidenLogin/hidenLogin';
 import {v4 as uuidv4} from 'uuid'
+import { useDispatch, useSelector } from 'react-redux';
 
 
 function App() {
